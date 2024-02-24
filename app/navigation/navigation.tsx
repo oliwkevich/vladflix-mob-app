@@ -8,7 +8,12 @@ const Stack = createNativeStackNavigator<TypeRootStackParamList>();
 const Navigation = () => {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator screenOptions={{ headerShown: false }}>
+			<Stack.Navigator
+				screenOptions={{
+					headerShown: false,
+					contentStyle: { backgroundColor: '#090909' }
+				}}
+			>
 				{userRoutes.map((route) => (
 					<Stack.Screen key={route.name} {...route} />
 				))}
